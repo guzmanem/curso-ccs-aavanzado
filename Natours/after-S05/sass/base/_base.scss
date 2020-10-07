@@ -9,8 +9,38 @@
 html {
     // This defines what 1rem is
     font-size: 62.5%;
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+    
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 40%;
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+
 }
