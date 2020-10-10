@@ -352,3 +352,70 @@
         z-index: 1;
     }
 }
+
+///////////////////////
+///// call to action
+
+.cta {
+    padding: 3.5rem 0;
+    text-align:  center;
+
+    &__book-now {
+        font-size: 2em;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+}
+
+//////////////
+/// call to action
+
+.btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    position: relative;
+    color: white;
+    overflow: hidden;
+    cursor: pointer;
+
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .4s;
+    }        
+
+
+    &__visible {
+        padding: 2rem 7.5rem;
+        opacity: 1;
+    }
+
+    &__invisible {
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+        opacity: 0;
+    }
+
+    &:hover &__visible  {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    &:hover &__invisible  {
+        top: 0;
+        opacity: 1;
+    }
+
+    &:hover {
+        outline: none;
+        animation: pulsate 1s infinite 2s;
+    }
+}
