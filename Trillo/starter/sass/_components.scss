@@ -112,12 +112,27 @@
     list-style: none;
     margin-top: 3.5rem;
 
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        align-content: space-between;
+        align-items: center;
+        margin: 0;
+     } 
+
     &__item {
         position: relative;
 
         &:not(:last-child){
             margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 0;
+             } 
         }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
+         }
     }
 
     &__item::before {
@@ -156,6 +171,11 @@
         
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+         }
     }
 
 
@@ -174,6 +194,10 @@
     color: var(--color-grey-light04);
     text-align: center;
     padding: 2.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+     } 
 }
 
 //////////////// gallery
@@ -302,6 +326,11 @@
     position: relative;
     overflow: hidden;
 
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+     }
+
     &__text {
         z-index: 2;
         position: relative;
@@ -359,6 +388,10 @@
 .cta {
     padding: 3.5rem 0;
     text-align:  center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+     }
 
     &__book-now {
         font-size: 2em;
